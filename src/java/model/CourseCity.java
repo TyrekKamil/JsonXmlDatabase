@@ -3,7 +3,7 @@ package model;
 public class CourseCity {
 
     private int id;
-    String name;
+    public  String name;
 
     public int getId() {
         return id;

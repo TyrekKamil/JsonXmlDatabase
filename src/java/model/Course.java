@@ -11,7 +11,7 @@ public class Course
     }
 
     private int id;
-    String name;
-    int hour;
+    public String name;
+    public int hour;
 
 }

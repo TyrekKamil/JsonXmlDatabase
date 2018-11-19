@@ -2,9 +2,9 @@ package model;
 
 public class Payments {
     private int id;
-    int idPerson;
-    int idCourse;
-    int money;
+    public int idPerson;
+    public int idCourse;
+    public  int money;
     //data zapisania
     //data wpłaty
 }
