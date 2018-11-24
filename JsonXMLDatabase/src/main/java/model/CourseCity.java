@@ -1,5 +1,4 @@
 package model;
-
 public class CourseCity {
 
     private int id;

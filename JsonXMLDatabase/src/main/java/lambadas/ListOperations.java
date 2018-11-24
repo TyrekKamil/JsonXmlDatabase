@@ -22,7 +22,7 @@ public class ListOperations {
         employeeList.addAll(addEmp());
 
         //For loop through list
-      /*  IntStream.range(0,employeeList.size())
+      IntStream.range(0,employeeList.size())
                 .forEach(iter -> System.out.println(employeeList.get(iter).getImie()));
 
         System.out.println("**************************");
@@ -79,7 +79,7 @@ public class ListOperations {
         //Create Map name -> employee
         Map<String, Person> map = employeeList.stream()
                 .collect(Collectors.toMap(employee -> employee.getImie(), employee -> employee, (a, b) -> a));
-*/
+
         System.out.println(map.entrySet());
 
     }
