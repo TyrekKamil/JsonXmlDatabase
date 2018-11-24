@@ -1,14 +1,32 @@
 package model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.joda.time.DateTime;
+
 public class Person
 {
     private int id;
 
-    public String imie;
-    public String nazwisko;
-    public String wiek;
-    public String miasto;
-    public String pesel;
+    private String imie;
+    private String nazwisko;
+    private String miasto;
+
+    @JsonIgnore
+    private String pesel;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss.SSSZ")
+    private DateTime birth;
+
+
+    public DateTime getBirth() {
+        return birth;
+    }
+
+    public void setBirth(DateTime birth) {
+        this.birth = birth;
+    }
+
 
     public int getId() {
         return id;
@@ -32,14 +50,6 @@ public class Person
 
     public void setNazwisko(String nazwisko) {
         this.nazwisko = nazwisko;
-    }
-
-    public String getWiek() {
-        return wiek;
-    }
-
-    public void setWiek(String wiek) {
-        this.wiek = wiek;
     }
 
     public String getMiasto() {
