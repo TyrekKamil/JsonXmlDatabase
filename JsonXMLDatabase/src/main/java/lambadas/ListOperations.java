@@ -21,66 +21,7 @@ public class ListOperations {
         employeeList.add(objectsCreator.getEmp2());
         employeeList.addAll(addEmp());
 
-        //For loop through list
-      IntStream.range(0,employeeList.size())
-                .forEach(iter -> System.out.println(employeeList.get(iter).getImie()));
 
-        System.out.println("**************************");
-
-        //Foreach type loop through the list
-        employeeList.forEach(emploee -> System.out.println(emploee.getImie()));
-
-        System.out.println("**************************");
-
-        //Loop filtering only those people which name start with A
-        employeeList.stream()
-                .filter(emploee -> emploee.getImie().startsWith("A"))
-                .forEach(element -> System.out.println(element.getImie()));
-
-        System.out.println("**************************");
-
-        //Loop, map object to strings -> names and filtering only those people which name start with B
-        employeeList.stream()
-                .map(employee -> employee.getImie())
-                .filter(name -> name.startsWith("B"))
-                .forEach(element -> System.out.println(element));
-
-        System.out.println("**************************");
-
-        //Loop, map object to address city names and return distinct
-        employeeList.stream()
-                .map(employee -> employee.getMiasto())
-                .distinct()
-                .forEach(element -> System.out.println(element));
-
-        System.out.println("**************************");
-
-        //Loop writing names sorted
-        employeeList.stream()
-                .sorted(Comparator.comparing(Person::getImie))
-                .forEach(element -> System.out.println(element.getImie()));
-
-        System.out.println("**************************");
-
-        //Loop get person with the first alphabetical name
-        System.out.println(employeeList.stream()
-                .sorted(Comparator.comparing(Person::getImie))
-                .findFirst().get().getImie());
-
-        System.out.println("**************************");
-
-        //Create List of names
-        List<String> list = employeeList.stream()
-                .map(employee -> employee.getImie())
-                .collect(Collectors.toList());
-
-        System.out.println("**************************");
-
-        //Create Map name -> employee
-        Map<String, Person> map = employeeList.stream()
-                .collect(Collectors.toMap(employee -> employee.getImie(), employee -> employee, (a, b) -> a));
-
-        System.out.println(map.entrySet());
 
     }
 

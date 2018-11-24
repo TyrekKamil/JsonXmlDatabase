@@ -32,15 +32,17 @@ public class ModelObjectsCreator {
 
     public void init(){
         emp = new Person();
+        emp.setId(1);
         emp.setImie("Jan");
-        emp.setNazwisko("Polak" + new Random().nextInt());
+        emp.setNazwisko("Polak");
         emp.setBirth(DateTime.now().minusYears(18));
         emp.setMiasto("Poznań");
         emp.setPesel("98030408259");
 
         emp2 = new Person();
+        emp2.setId(2);
         emp2.setImie("Marian");
-        emp2.setNazwisko("Wiejski" + new Random().nextInt());
+        emp2.setNazwisko("Wiejski");
         emp2.setBirth(DateTime.now().minusMonths(150));
         emp2.setMiasto("Częstochowa");
         emp2.setPesel("98030401239");
