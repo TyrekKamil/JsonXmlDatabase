@@ -1,9 +1,20 @@
 package model;
 
 public class PersonCourse{
+
+
+    private int id;
     private int idPerson;
     private int idCityCourse;
     private int idCourse;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public int getIdCourse() {
         return idCourse;
