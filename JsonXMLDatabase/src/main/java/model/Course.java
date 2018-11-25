@@ -2,6 +2,29 @@ package model;
 
 public class Course
 {
+
+    private int id;
+    private String name;
+    private int hour;
+
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getHour() {
+        return hour;
+    }
+
+    public void setHour(int hour) {
+        this.hour = hour;
+    }
+
+
     public int getId() {
         return id;
     }
@@ -10,8 +33,6 @@ public class Course
         this.id = id;
     }
 
-    private int id;
-    public String name;
-    public int hour;
+
 
 }

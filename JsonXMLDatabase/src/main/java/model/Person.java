@@ -15,7 +15,7 @@ public class Person
     @JsonIgnore
     private String pesel;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss.SSSZ")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private DateTime birth;
 
 

@@ -2,24 +2,13 @@ package model;
 public class CourseCity {
 
     private int id;
-    public  String name;
-
-    public int getId() {
-        return id;
-    }
+    private String city;
 
     public void setId(int id) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public void setCity(String city) {
+        this.city = city;
     }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-
-
 }
