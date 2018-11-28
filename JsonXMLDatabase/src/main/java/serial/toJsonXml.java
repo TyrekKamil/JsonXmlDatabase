@@ -13,13 +13,12 @@ import org.apache.log4j.Logger;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class serial {
+public class toJsonXml {
 
-    final static Logger logger = Logger.getLogger(serial.class);
+    final static Logger logger = Logger.getLogger(toJsonXml.class);
 
     public static void serializeDemo(ObjectMapper mapper, String fileSuffix) throws IOException {
 
@@ -77,7 +76,7 @@ public class serial {
 
     public static void deserializeDemo(ObjectMapper mapper, String fileSuffix) throws IOException {
         //Deserialized employee object from employees.* file in resources
-        /*InputStream employeeIs = serial.class.getClassLoader().
+        /*InputStream employeeIs = toJsonXml.class.getClassLoader().
                 getResourceAsStream("person." + fileSuffix);*/
     try {
         //Read value - set class type of serializationmapper.writeValueAsString(deserializedEmployee);

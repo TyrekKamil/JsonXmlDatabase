@@ -1,20 +1,32 @@
 package model;
-
+import javax.persistence.*;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.joda.time.DateTime;
 
+@Entity
+@Table(name = "PERSON", uniqueConstraints = {
+        @UniqueConstraint(columnNames = {"pesel"})})
 public class Person
 {
+    @Id @GeneratedValue
+    @Column(name = "id")
     private int id;
 
+    @Column(name="imie")
     private String imie;
+
+    @Column(name="nazwisko")
     private String nazwisko;
+
+    @Column(name="miasto")
     private String miasto;
 
     @JsonIgnore
+    @Column(name="pesel", nullable = false, unique = true)
     private String pesel;
 
+    @Column(name="data urodzenia")
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private DateTime birth;
 
