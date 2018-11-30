@@ -17,13 +17,14 @@ class save {
 
         System.out.println("Start");
 
-        EntityManager entityManager = null;
+        EntityManager entityManager;
 
         EntityManagerFactory entityManagerFactory = null;
 
-        try {
+
+                try {
             //taka nazwa jak w persistence.xml
-            entityManagerFactory = Persistence.createEntityManagerFactory("hibernate-dynamicw");
+            entityManagerFactory = Persistence.createEntityManagerFactory("hibernate-dynamic");
             //utworz entityManagera
             entityManager = entityManagerFactory.createEntityManager();
 
@@ -57,7 +58,7 @@ class save {
             emp3.setPesel("98072108123");
 
             entityManager.persist(emp);
-        //    entityManager.persist(emp2);
+            entityManager.persist(emp2);
 
             Person person = entityManager.find(Person.class, emp.getId());
 
@@ -87,3 +88,8 @@ class save {
     }
 
 }
+
+
+
+
+
