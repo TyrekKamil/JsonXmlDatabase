@@ -16,10 +16,10 @@ public class Course
     private String name;
     @Column(name = "godziny")
     private int hour;
-    @Column(name = "miasta")
-    private List<CourseCity> cities;
+   /* @Column(name = "miasta")
+    private List<CourseCity> cities;*/
 
-    public void addToList(CourseCity a)
+    /*public void addToList(CourseCity a)
     {
         cities.add(a);
     }
@@ -30,7 +30,7 @@ public class Course
     public void setCities(List<CourseCity> cities) {
         this.cities = cities;
     }
-
+*/
     public String getName() {
         return name;
     }

@@ -92,7 +92,7 @@ public class ModelObjectsCreator {
         emp.setId(1);
         emp.setImie("Jan");
         emp.setNazwisko("Polak");
-        emp.setBirth(DateTime.now().minusYears(18));
+       // emp.setBirth(DateTime.now().minusYears(18));
         emp.setMiasto("Poznań");
         emp.setPesel("98030408259");
 
@@ -100,7 +100,7 @@ public class ModelObjectsCreator {
         emp2.setId(2);
         emp2.setImie("Marian");
         emp2.setNazwisko("Wiejski");
-        emp2.setBirth(DateTime.now());
+       // emp2.setBirth(DateTime.now());
         emp2.setMiasto("Częstochowa");
         emp2.setPesel("98030401239");
 
@@ -108,7 +108,7 @@ public class ModelObjectsCreator {
         emp3.setId(3);
         emp3.setImie("Marlena");
         emp3.setNazwisko("Zarzycka");
-        emp3.setBirth(DateTime.now().minusYears(20));
+        //emp3.setBirth(DateTime.now().minusYears(20));
         emp3.setMiasto("Bolesławiec");
         emp3.setPesel("98072108123");
 
@@ -128,7 +128,7 @@ public class ModelObjectsCreator {
         course.setId(1);
         course.setName("C# - poznaj to!");
         course.setHour(12);
-        course.setCities(x);
+       // course.setCities(x);
 
         List<CourseCity> x2 = new ArrayList<>();
         x2.add(courseCity2);
@@ -136,7 +136,7 @@ public class ModelObjectsCreator {
         course2.setId(2);
         course2.setName("Java - to Twoja przyszłość");
         course2.setHour(20);
-        course2.setCities(x2);
+        //course2.setCities(x2);
 
         courseList = new ArrayList<Course>();
         courseList.add(course);

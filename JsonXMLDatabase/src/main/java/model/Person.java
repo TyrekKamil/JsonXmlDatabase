@@ -5,33 +5,33 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.joda.time.DateTime;
 
 @Entity
-@Table(name = "PERSON", uniqueConstraints = {
+@Table(name = "person", uniqueConstraints = {
         @UniqueConstraint(columnNames = {"pesel"})})
 public class Person
 {
     @Id @GeneratedValue
-    @Column(name = "id")
+    @Column
     private int id;
 
-    @Column(name="imie")
+    @Column
     private String imie;
 
-    @Column(name="nazwisko")
+    @Column
     private String nazwisko;
 
-    @Column(name="miasto")
+    @Column
     private String miasto;
 
     @JsonIgnore
-    @Column(name="pesel", nullable = false, unique = true)
+    @Column(nullable = false, unique = true)
     private String pesel;
 
-    @Column(name="data urodzenia")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
-    private DateTime birth;
+   // @Column(name="data urodzenia")
+    //@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    //private DateTime birth;
 
 
-    public DateTime getBirth() {
+   /* public DateTime getBirth() {
         return birth;
     }
 
@@ -39,7 +39,7 @@ public class Person
         this.birth = birth;
     }
 
-
+*/
     public int getId() {
         return id;
     }
