@@ -1,12 +1,24 @@
-package model;
+/*package model;
 
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
+@Table(name = "PERSONCOURSE")
 public class PersonCourse{
 
 
+
+    @Id
+    @GeneratedValue(generator = "gen3")
+    @SequenceGenerator(name="gen3", sequenceName = "author_seq3")
+    @Column
     private int id;
-    private int idPerson;
-    private int idCityCourse;
-    private int idCourse;
+    @Column
+    private List<Person> person = new ArrayList<Person>();
+    @Column
+    private List<Course> course = new ArrayList<Course>();
 
     public int getId() {
         return id;
@@ -41,3 +53,4 @@ public class PersonCourse{
         this.idCityCourse = idCityCourse;
     }
 }
+*/

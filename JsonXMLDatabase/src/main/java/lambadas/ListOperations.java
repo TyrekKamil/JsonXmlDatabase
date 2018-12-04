@@ -13,21 +13,21 @@ public class ListOperations {
 
     public static void main(String[] args) throws IOException {
 
-        ModelObjectsCreator objectsCreator = new ModelObjectsCreator();
+   /*     ModelObjectsCreator objectsCreator = new ModelObjectsCreator();
 
         List<Person> employeeList = new ArrayList<>();
 
         employeeList.add(objectsCreator.getEmp());
         employeeList.add(objectsCreator.getEmp2());
         employeeList.addAll(addEmp());
-
+*/
 
 
     }
 
-    private static List<Person> addEmp() {
+  /*  private static List<Person> addEmp() {
 
-        List<Person> people = new ArrayList<>();
+/*        List<Person> people = new ArrayList<>();
 
         Person emp;
         Person emp2;
@@ -50,5 +50,6 @@ public class ListOperations {
         people.add(emp2);
 
         return people;
-    }
+    }*/
+
 }

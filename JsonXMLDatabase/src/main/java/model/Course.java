@@ -1,6 +1,7 @@
 package model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -9,28 +10,53 @@ public class Course
 {
 
     @Id
-    @GeneratedValue
-    @Column(name = "id")
+    @GeneratedValue(generator = "gen2")
+    @SequenceGenerator(name="gen2", sequenceName = "author_seq2")
+    @Column
     private int id;
+
     @Column(name = "nazwa")
     private String name;
+
     @Column(name = "godziny")
     private int hour;
-   /* @Column(name = "miasta")
-    private List<CourseCity> cities;*/
 
-    /*public void addToList(CourseCity a)
-    {
-        cities.add(a);
-    }
-    public List<CourseCity> getCities() {
-        return cities;
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Speaker speaker;
+
+
+  /* @ManyToMany(cascade = CascadeType.ALL)
+    private List<Person> person = new ArrayList<Person>();*/
+
+    @OneToMany(mappedBy = "course", fetch = FetchType.LAZY)
+    private List<Opinion> opinions = new ArrayList<Opinion>();
+
+  /*  public List<Person> getPerson() {
+        return person;
     }
 
-    public void setCities(List<CourseCity> cities) {
-        this.cities = cities;
+    public void setPerson(List<Person> person) {
+        this.person = person;
     }
 */
+    public List<Opinion> getOpinions() {
+        return opinions;
+    }
+
+    public void setOpinions(List<Opinion> opinions) {
+        this.opinions = opinions;
+    }
+
+    public Speaker getSpeaker() {
+        return speaker;
+    }
+
+    public void setSpeaker(Speaker speaker) {
+        this.speaker = speaker;
+    }
+
+
+
     public String getName() {
         return name;
     }

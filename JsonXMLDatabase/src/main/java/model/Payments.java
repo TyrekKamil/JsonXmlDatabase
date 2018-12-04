@@ -3,13 +3,24 @@ package model;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.joda.time.DateTime;
 
+import javax.persistence.*;
+/*
+@Entity
+@Table(name = "PAYMENTS")
 public class Payments {
+
+    @Id
+    @GeneratedValue
+    @Column
     private int id;
+    @Column
     private int idPersonCourse;
+    @Column
     private int money;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private DateTime dayPayment;
 
+    @javax.persistence.Id
     public int getId() {
         return id;
     }
@@ -42,3 +53,4 @@ public class Payments {
         this.dayPayment = dayPayment;
     }
 }
+*/

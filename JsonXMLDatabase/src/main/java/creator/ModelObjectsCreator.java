@@ -13,7 +13,7 @@ import java.util.Random;
  */
 public class ModelObjectsCreator {
 
-    private Person emp;
+    /*private Person emp;
     private Person emp2;
     private Person emp3;
 
@@ -88,7 +88,7 @@ public class ModelObjectsCreator {
     }
 
     public void init(){
-        emp = new Person();
+       emp = new Person();
         emp.setId(1);
         emp.setImie("Jan");
         emp.setNazwisko("Polak");
@@ -100,7 +100,7 @@ public class ModelObjectsCreator {
         emp2.setId(2);
         emp2.setImie("Marian");
         emp2.setNazwisko("Wiejski");
-       // emp2.setBirth(DateTime.now());
+        emp2.setBirth(DateTime.now());
         emp2.setMiasto("Częstochowa");
         emp2.setPesel("98030401239");
 
@@ -239,5 +239,5 @@ public class ModelObjectsCreator {
 
     }
 
-
+*/
 }

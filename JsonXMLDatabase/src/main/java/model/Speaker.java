@@ -5,14 +5,18 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.joda.time.DateTime;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
-@Table(name = "person", uniqueConstraints = {
+@Table(name = "speaker", uniqueConstraints = {
         @UniqueConstraint(columnNames = {"pesel"})})
-public class Person
+public class Speaker
 {
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue(generator = "gen1")
+    @SequenceGenerator(name="gen1", sequenceName = "author_seq1")
     @Column
     private int id;
 
@@ -28,45 +32,47 @@ public class Person
     @JoinColumn(name="add_id", referencedColumnName = "id")
     Address adres;
 
+
+    @OneToMany(mappedBy = "speaker", fetch = FetchType.LAZY)
+    private List<Course> course = new ArrayList<Course>();
+
+
     @JsonIgnore
     @Column(nullable = false, unique = true)
     private String pesel;
 
-
-
-  /* @ManyToMany(mappedBy = "person", cascade = CascadeType.ALL)
-    private List<Course> courses = new ArrayList<Course>();
-
-    public List<Course> getCourses() {
-        return courses;
-    }
-
-    public void setCourses(List<Course> courses) {
-        this.courses = courses;
-    }*/
-   // @Column(name="data urodzenia")
+    // @Column(name="data urodzenia")
     //@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     //private DateTime birth;
 
 
-   /* public DateTime getBirth() {
-        return birth;
+    /* public DateTime getBirth() {
+         return birth;
+     }
+
+     public void setBirth(DateTime birth) {
+         this.birth = birth;
+     }
+
+ */
+    public List<Course> getCourse() {
+        return course;
     }
 
-    public void setBirth(DateTime birth) {
-        this.birth = birth;
+    public void setCourse(List<Course> course) {
+        this.course = course;
     }
 
-*/
-   public Address getAdres() {
-       return adres;
-   }
+
+    public Address getAdres() {
+        return adres;
+    }
 
     public void setAdres(Address adres) {
         this.adres = adres;
     }
 
-   public int getId() {
+    public int getId() {
         return id;
     }
 

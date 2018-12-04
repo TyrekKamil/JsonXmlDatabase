@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class toJsonXml {
+public class toJsonXml {/*
 
     final static Logger logger = Logger.getLogger(toJsonXml.class);
 
@@ -71,13 +71,13 @@ public class toJsonXml {
         mapper.writeValue(new File("result-modified." + fileSuffix), deserializedEmployee);
         String modifiedJsonString = mapper.writeValueAsString(deserializedEmployee);
         logger.info("Printing serialized modified object " + fileSuffix);
-        System.out.println(modifiedJsonString);*/
+        System.out.println(modifiedJsonString);
     }
 
     public static void deserializeDemo(ObjectMapper mapper, String fileSuffix) throws IOException {
-        //Deserialized employee object from employees.* file in resources
-        /*InputStream employeeIs = toJsonXml.class.getClassLoader().
-                getResourceAsStream("person." + fileSuffix);*/
+        Deserialized employee object from employees.* file in resources
+        InputStream employeeIs = toJsonXml.class.getClassLoader().
+                getResourceAsStream("person." + fileSuffix);
     try {
         //Read value - set class type of serializationmapper.writeValueAsString(deserializedEmployee);
         Person deserialize = mapper.readValue("person.json", Person.class);
@@ -105,5 +105,5 @@ public class toJsonXml {
         serializeDemo(xmlMapper, "xml");
         //deserializeDemo(jsonMapper, "json");
 
-    }
+    }*/
 }
