@@ -152,9 +152,11 @@ class save {
 
 
 //==============ADD=================================\\
-                    entityManager.persist(emp);
-                    entityManager.persist(emp2);
-                    entityManager.persist(emp3);
+
+
+            entityManager.persist(emp);
+            entityManager.persist(emp2);
+            entityManager.persist(emp3);
 
             entityManager.persist(adr1);
             entityManager.persist(adr2);
@@ -198,6 +200,11 @@ class save {
         {
            entityManagerFactory.close();
         }
+
+    }
+
+    public void makeElements()
+    {
 
     }
 

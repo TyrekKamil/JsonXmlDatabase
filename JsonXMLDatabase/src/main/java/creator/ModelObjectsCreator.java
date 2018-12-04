@@ -1,243 +1,216 @@
 package creator;
 
 import model.*;
-import org.joda.time.DateTime;
 
-import java.sql.Time;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 /**
  * Helper class which provides methods to create instances of hibernate.model classes
  */
 public class ModelObjectsCreator {
 
-    /*private Person emp;
+
+    private Person emp;
     private Person emp2;
     private Person emp3;
 
+    private Address adr1;
+    private Address adr2;
+    private Address adr3;
+    private Address adr4;
+    private Address adr5;
 
-    private Course course;
+    private Course course1;
     private Course course2;
+    private Course course3;
 
-    private CourseCity courseCity;
-    private CourseCity courseCity2;
+    private Opinion opinion1;
+    private Opinion opinion2;
 
-    private Payments payment;
-    private Payments payment2;
-    private Payments payment3;
-    private Payments payment4;
-
-    private PersonCourse personCourse;
-    private PersonCourse personCourse2;
-    private PersonCourse personCourse3;
-    private PersonCourse personCourse4;
-
-    List<PersonCourse> personCoursesList;
-    List<Payments> paymentsList;
-    List<CourseCity> courseCityList;
-    List<Course> courseList;
+    private Speaker speaker1;
+    private Speaker speaker2;
+    List<Address> addresses;
+    List<Course> courses;
+    List<Opinion> opinions;
     List<Person> people;
-
-    public List<PersonCourse> getPersonCoursesList() {
-        return personCoursesList;
+    List<Speaker> speakers;
+    public List<Address> getAddresses() {
+        return addresses;
     }
 
-    public void setPersonCoursesList(List<PersonCourse> personCoursesList) {
-        this.personCoursesList = personCoursesList;
+    public List<Course> getCourses() {
+        return courses;
     }
 
-
-    public List<Payments> getPaymentsList() {
-        return paymentsList;
+    public List<Opinion> getOpinions() {
+        return opinions;
     }
 
-    public List<CourseCity> getCourseCityList() {
-        return courseCityList;
-    }
-
-
-    public Person getEmp3() {
-        return emp3;
-    }
-
-    public Course getCourse() {
-        return course;
-    }
-
-    public Course getCourse2() {
-        return course2;
-    }
-
-    public List<Course> getCourseList() {
-        return courseList;
-    }
-
-
-    public Person getEmp() {
-        return emp;
-    }
-
-    public Person getEmp2() {
-        return emp2;
-    }
-
-    public List<Person> getEmployees() {
+    public List<Person> getPeople() {
         return people;
     }
 
+    public List<Speaker> getSpeakers() {
+        return speakers;
+    }
     public void init(){
-       emp = new Person();
-        emp.setId(1);
+
+        //=================ADRES=======================================\\
+        adr1 = new Address();
+        adr1.setMiasto("Poznań");
+        adr1.setNumer("12A");
+        adr1.setUlica("Wrocławska");
+
+        adr2 = new Address();
+        adr2.setMiasto("Szczecin");
+        adr2.setUlica("Malwinowska");
+        adr2.setNumer("61");
+
+        adr3 = new Address();
+        adr3.setMiasto("Bolesławiec");
+        adr3.setUlica("Marlenkowa");
+        adr3.setNumer("123");
+
+        adr4 = new Address();
+        adr4.setMiasto("Warszawa");
+        adr4.setUlica("Wiejska");
+        adr4.setNumer("4/6/8");
+
+        adr5 = new Address();
+        adr5.setMiasto("Wrocław");
+        adr5.setNumer("15G");
+        adr5.setUlica("Miejska");
+
+        addresses = new ArrayList<Address>();
+        addresses.add(adr1);
+        addresses.add(adr2);
+        addresses.add(adr3);
+        addresses.add(adr4);
+        addresses.add(adr5);
+
+//==============SPEAKER=================================\\
+        course1 = new Course();
+        course2 = new Course();
+        course3 = new Course();
+
+        List<Course> speaker1Course = new ArrayList<Course>();
+        List<Course> speaker2Course = new ArrayList<Course>();
+        speaker1Course.add(course1);
+        speaker1Course.add(course3);
+        speaker2Course.add(course2);
+
+        speaker1 = new  Speaker();
+        speaker1.setImie("Adam");
+        speaker1.setNazwisko("Nowak");
+        speaker1.setPesel("87121209012");
+        speaker1.setAdres(adr4);
+
+
+        speaker2 = new Speaker();
+        speaker2.setImie("Mariusz");
+        speaker2.setNazwisko("Wierzbicki");
+        speaker2.setPesel("85110909122");
+        speaker2.setAdres(adr5);
+
+        speakers = new ArrayList<Speaker>();
+        speakers.add(speaker1);
+        speakers.add(speaker2);
+
+
+
+//==============COURSE=================================\\
+
+        course1.setName("Java - wygraj życie!");
+        course1.setHour(25);
+        course1.setSpeaker(speaker1);
+
+        course2.setName("C# - krok po kroku");
+        course2.setHour(20);
+        course2.setSpeaker(speaker2);
+
+        course3.setName("Java - jak ją poznać?");
+        course3.setHour(15);
+        course3.setSpeaker(speaker1);
+
+        speaker1.setCourse(speaker1Course);
+        speaker2.setCourse(speaker2Course);
+
+        courses = new ArrayList<Course>();
+        courses.add(course1);
+        courses.add(course2);
+        courses.add(course3);
+
+//==============PERSON=================================\\
+
+        List<Course> coursesPerson1 = new ArrayList<>();
+        List<Course> coursesPerson2 = new ArrayList<>();
+        List<Course> coursesPerson3 = new ArrayList<>();
+
+        coursesPerson1.add(course1);
+        coursesPerson1.add(course2);
+        coursesPerson3.add(course3);
+        coursesPerson2.add(course1);
+        coursesPerson3.add(course2);
+        coursesPerson3.add(course3);
+
+        emp = new Person();
         emp.setImie("Jan");
         emp.setNazwisko("Polak");
-       // emp.setBirth(DateTime.now().minusYears(18));
-        emp.setMiasto("Poznań");
+        emp.setAdres(adr1);
         emp.setPesel("98030408259");
+        //emp.setCourses(coursesPerson1);
 
         emp2 = new Person();
-        emp2.setId(2);
         emp2.setImie("Marian");
         emp2.setNazwisko("Wiejski");
-        emp2.setBirth(DateTime.now());
-        emp2.setMiasto("Częstochowa");
+        emp2.setAdres(adr2);
         emp2.setPesel("98030401239");
+        //emp2.setCourses(coursesPerson2);
 
         emp3 = new Person();
-        emp3.setId(3);
         emp3.setImie("Marlena");
         emp3.setNazwisko("Zarzycka");
-        //emp3.setBirth(DateTime.now().minusYears(20));
-        emp3.setMiasto("Bolesławiec");
+        emp3.setAdres(adr3);
         emp3.setPesel("98072108123");
+        //emp3.setCourses(coursesPerson3);
 
         people = new ArrayList<Person>();
         people.add(emp);
         people.add(emp2);
         people.add(emp3);
+//==============Opinions=================================\\
 
-    }
+        List<Opinion> opinionsOfCourse1 = new ArrayList<Opinion>();
+        List<Opinion> opinionsOfCourse2 = new ArrayList<Opinion>();
 
-    public void addCourse()
-    {
-        List<CourseCity> x = new ArrayList<>();
-        x.add(courseCity2);
-        x.add(courseCity);
-        course = new Course();
-        course.setId(1);
-        course.setName("C# - poznaj to!");
-        course.setHour(12);
-       // course.setCities(x);
+        opinion1 = new Opinion();
+        opinion2 = new Opinion();
 
-        List<CourseCity> x2 = new ArrayList<>();
-        x2.add(courseCity2);
-        course2 = new Course();
-        course2.setId(2);
-        course2.setName("Java - to Twoja przyszłość");
-        course2.setHour(20);
-        //course2.setCities(x2);
+        opinion1.setPerson(emp);
+        opinion1.setCourse(course1);
+        opinion1.setText("super kurs!");
+        opinionsOfCourse1.add(opinion1);
 
-        courseList = new ArrayList<Course>();
-        courseList.add(course);
-        courseList.add(course2);
+        opinion2.setPerson(emp3);
+        opinion2.setCourse(course2);
+        opinion2.setText("za duzo teorii, za malo praktyki");
+        opinionsOfCourse2.add(opinion2);
 
-    }
+        opinions = new ArrayList<Opinion>();
+        opinions.add(opinion1);
+        opinions.add(opinion2);
 
-    public void addCourseCity()
-    {
-        courseCity = new CourseCity();
-        courseCity.setId(1);
-        courseCity.setCity("Warszawa");
-
-        courseCity2 = new CourseCity();
-        courseCity2.setId(2);
-        courseCity2.setCity("Poznań");
-
-
-        courseCityList = new ArrayList<CourseCity>();
-        courseCityList.add(courseCity);
-        courseCityList.add(courseCity2);
-    }
-
-    public void addPayment()
-    {
-        payment = new Payments();
-        payment.setId(1);
-        payment.setIdPersonCourse(1);
-        payment.setDayPayment(new DateTime(2018,10,15,0,0));
-        payment.setMoney(350);
-
-        payment2 = new Payments();
-        payment2.setId(2);
-        payment2.setIdPersonCourse(2);
-        payment2.setDayPayment(new DateTime(2018,11,2,0,0));
-        payment2.setMoney(520);
-
-        payment3 = new Payments();
-        payment3.setId(3);
-        payment3.setIdPersonCourse(3);
-        payment3.setDayPayment(new DateTime(2018,9,12,0,0));
-        payment3.setMoney(1110);
-
-        payment4 = new Payments();
-        payment4.setId(4);
-        payment4.setIdPersonCourse(4);
-        payment4.setDayPayment(new DateTime(2018,12,12,0,0));
-        payment4.setMoney(3550);
-
-        paymentsList = new ArrayList<>();
-        paymentsList.add(payment);
-        paymentsList.add(payment2);
-        paymentsList.add(payment3);
-        paymentsList.add(payment4);
-
-    }
-
-    public void addPersonCourse()
-    {
-
-        personCourse = new PersonCourse();
-        personCourse.setId(1);
-        personCourse.setIdPerson(1);
-        personCourse.setIdCityCourse(1);
-        personCourse.setIdCourse(1);
-
-        personCourse2 = new PersonCourse();
-        personCourse2.setId(2);
-        personCourse2.setIdPerson(3);
-        personCourse2.setIdCityCourse(2);
-        personCourse2.setIdCourse(2);
-
-        personCourse3 = new PersonCourse();
-        personCourse3.setId(3);
-        personCourse3.setIdPerson(2);
-        personCourse3.setIdCityCourse(1);
-        personCourse3.setIdCourse(2);
-
-        personCourse4 = new PersonCourse();
-        personCourse4.setId(4);
-        personCourse4.setIdPerson(3);
-        personCourse4.setIdCityCourse(2);
-        personCourse4.setIdCourse(1);
-
-        personCoursesList = new ArrayList<>();
-        personCoursesList.add(personCourse);
-        personCoursesList.add(personCourse2);
-        personCoursesList.add(personCourse3);
-        personCoursesList.add(personCourse4);
+        course1.setOpinions(opinionsOfCourse1);
+        course2.setOpinions(opinionsOfCourse2);
 
 
     }
 
     public ModelObjectsCreator(){
         init();
-        addCourseCity();
-        addCourse();
-        addPersonCourse();
-        addPayment();
 
     }
 
-*/
+
 }

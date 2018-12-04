@@ -1,5 +1,7 @@
 package model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,12 +23,14 @@ public class Course
     @Column(name = "godziny")
     private int hour;
 
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     private Speaker speaker;
 
 
   /* @ManyToMany(cascade = CascadeType.ALL)
     private List<Person> person = new ArrayList<Person>();*/
+
 
     @OneToMany(mappedBy = "course", fetch = FetchType.LAZY)
     private List<Opinion> opinions = new ArrayList<Opinion>();

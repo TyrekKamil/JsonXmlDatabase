@@ -1,6 +1,12 @@
 package model;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 import javax.persistence.*;
+@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class,
+        property="person_id", scope=Opinion.class)
 @Entity
 @Table(name = "Opinion")
 public class Opinion {
@@ -12,10 +18,12 @@ public class Opinion {
     private int id;
 
     @OneToOne(cascade = CascadeType.PERSIST)
+    @JsonIgnore
     @JoinColumn(name="person_id", referencedColumnName = "id")
     private Person person;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="course_id", referencedColumnName = "id")
     private Course course;
 
     @Column
