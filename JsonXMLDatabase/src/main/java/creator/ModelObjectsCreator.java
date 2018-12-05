@@ -2,6 +2,7 @@ package creator;
 
 import model.*;
 
+import javax.persistence.Query;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -206,6 +207,7 @@ public class ModelObjectsCreator {
 
 
     }
+
 
     public ModelObjectsCreator(){
         init();

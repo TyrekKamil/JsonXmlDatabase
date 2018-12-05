@@ -32,7 +32,10 @@ public class Person
     @Column(nullable = false, unique = true)
     private String pesel;
 
-
+    public String getAllInformation()
+    {
+        return imie + " " + nazwisko + " " + adres.getMiasto() + " " + adres.getUlica() + " " +  adres.getNumer() + " " + pesel;
+    }
 
   /* @ManyToMany(mappedBy = "person", cascade = CascadeType.ALL)
     private List<Course> courses = new ArrayList<Course>();

@@ -15,7 +15,8 @@ import java.util.List;
 
 class save {
 
-
+    static EntityManager entityManager;
+    static EntityManagerFactory entityManagerFactory;
     final static Logger logger = Logger.getLogger(save.class);
     public static void main(String[] args) {
 
@@ -24,8 +25,8 @@ class save {
 
 
 
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("hibernate-dynamic");
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        entityManagerFactory = Persistence.createEntityManagerFactory("hibernate-dynamic");
+        entityManager = entityManagerFactory.createEntityManager();
 
 
                 try {
@@ -178,13 +179,25 @@ class save {
             entityManager.persist(opinion2);
 
 
-            entityManager.flush();
-            entityManager.getTransaction().commit();
 
 
 
+            ///////////////////////////ZAPYTANIA\\\\\\\\\\\\\\\\\\\\\\\\\
 
-            System.out.println("Done");
+                    getAllPerson();
+                    getAllCourse();
+                    Opinion n = new Opinion();
+                    for (int i = 1; i<20; i++) {
+
+                        n = opinion1;
+                        entityManager.persist(n);
+                    }
+
+                    //opinionPages(5);
+
+                    entityManager.flush();
+                    entityManager.getTransaction().commit();
+                    System.out.println("Done");
 
 
             entityManager.close();
@@ -203,9 +216,59 @@ class save {
 
     }
 
-    public void makeElements()
+    public static void getAllPerson()
+    {
+        Query query = entityManager.createQuery("SELECT k FROM Person k");
+        System.out.println("\n\nLista klientów");
+        List<Person> result = query.getResultList();
+        for(int i = 0;i<result.size();i++)
+            System.out.println(result.get(i).getAllInformation());
+    }
+
+    public static void getAllCourse()
+    {
+        Query query = entityManager.createQuery("SELECT c FROM Course c");
+        System.out.println("\nLista kursów z prowadzącymi");
+        List<Course> result = query.getResultList();
+        for(int i = 0;i<result.size();i++)
+            System.out.println(result.get(i).getAllInformation());
+    }
+
+    public static void opinionByIdCourse()
     {
 
+    }
+
+    public static void courseSpeaker()
+    {
+
+    }
+
+    public static void peopleFromCity()
+    {
+
+    }
+
+    public static void opinionPages(int pageNr)
+    {
+        Query queryTotal = entityManager.createQuery
+                ("Select count(o) from Opinion o");
+        long countResult = (long)queryTotal.getSingleResult();
+
+        //create query
+        Query query = entityManager.createQuery("Select e FROM Opinion e");
+        //set pageSize
+        int pageSize = 5;
+        //calculate number of pages
+        int pageNumber = (int) ((countResult / pageSize) + 1);
+
+        if (pageNr > pageNumber) pageNr = pageNumber;
+        query.setFirstResult((pageNr-1) * pageSize);
+        query.setMaxResults(pageSize);
+
+        List<Opinion> opinions = new ArrayList<Opinion>();
+        for(int i = 0; i<query.getResultList().size();i++)
+            System.out.println(opinions.get(i).getCourse() + " " + opinions.get(i).getPerson() + "\n" + opinions.get(i).getText());
     }
 
 }

@@ -58,7 +58,10 @@ public class Course
     public void setSpeaker(Speaker speaker) {
         this.speaker = speaker;
     }
-
+    public String getAllInformation()
+    {
+        return name + " " + hour + " " + speaker.getImie() + " " + speaker.getNazwisko();
+    }
 
 
     public String getName() {

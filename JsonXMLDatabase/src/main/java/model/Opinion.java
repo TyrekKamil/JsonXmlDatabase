@@ -12,6 +12,10 @@ import javax.persistence.*;
 public class Opinion {
 
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Id
     @GeneratedValue(generator = "gen5")
     @SequenceGenerator(name="gen5", sequenceName = "author_seq5")
@@ -53,6 +57,14 @@ public class Opinion {
         this.text = text;
     }
 
+    public static Opinion copy(Opinion e) {
+        Opinion o = new Opinion();
+        o.setPerson(e.getPerson());
+        o.setText(e.getText());
+        o.setCourse(e.getCourse());
+
+        return o;
+    }
 
 
 }
