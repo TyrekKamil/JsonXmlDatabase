@@ -1,0 +1,32 @@
+<ArrayList>
+  <item>
+    <id>0</id>
+    <miasto>Poznań</miasto>
+    <ulica>Wrocławska</ulica>
+    <numer>12A</numer>
+  </item>
+  <item>
+    <id>0</id>
+    <miasto>Szczecin</miasto>
+    <ulica>Malwinowska</ulica>
+    <numer>61</numer>
+  </item>
+  <item>
+    <id>0</id>
+    <miasto>Bolesławiec</miasto>
+    <ulica>Marlenkowa</ulica>
+    <numer>123</numer>
+  </item>
+  <item>
+    <id>0</id>
+    <miasto>Warszawa</miasto>
+    <ulica>Wiejska</ulica>
+    <numer>4/6/8</numer>
+  </item>
+  <item>
+    <id>0</id>
+    <miasto>Wrocław</miasto>
+    <ulica>Miejska</ulica>
+    <numer>15G</numer>
+  </item>
+</ArrayList>

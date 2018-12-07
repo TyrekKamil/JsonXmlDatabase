@@ -9,7 +9,7 @@
           <factory-entry name="Entities" />
           <factory-entry name="hibernate-dynamic" />
         </datasource-mapping>
-        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/main/java/model/Course.java" />
+        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/main/resources/META-INF/persistence.xml" />
       </configuration>
     </facet>
   </component>

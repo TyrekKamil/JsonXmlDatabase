@@ -7,42 +7,47 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+
+import static org.junit.Assert.*;
 
 public class test
 {
 
     jsonToSqlPerson a;
+    List<Person> list;
 
-   @Before
+    @Before
    public void before()
    {
        a = new jsonToSqlPerson();
+        list  = new ArrayList<Person>();
    }
+
     @Test
     public void personFalseXML() throws IOException {
-        List<Person> list = new ArrayList<Person>();
-        String fileSuffix = "xml";
-        list = a.serialize("xml",0);
 
-        assertFalse(a.checkPersonFalse(list,fileSuffix));
+        String fileSuffix = "xml";
+
+        assertFalse(a.checkPerson(fileSuffix,"f"));
     }
 
     @Test
     public void personFalseJson() throws IOException {
-        List<Person> list = new ArrayList<Person>();
-        list = a.serialize("json",0);
         String fileSuffix = "json";
-        assertFalse(a.checkPersonFalse(list, fileSuffix));
+        assertFalse(a.checkPerson(fileSuffix,"f"));
     }
 
     @Test
-    public void personTrue() throws IOException {
-        List<Person> list = new ArrayList<Person>();
-        list = a.serialize("json",1);
+    public void personTrueJson() throws IOException
+    {
         String fileSuffix = "json";
-        assertTrue(a.checkPersonFalse(list, fileSuffix));
+        assertTrue(a.checkPerson(fileSuffix,"t"));
+    }
+
+    @Test
+    public void personTrueXml() throws IOException
+    {
+        String fileSuffix = "xml";
+        assertTrue(a.checkPerson(fileSuffix,"t"));
     }
 }

@@ -1,0 +1,13 @@
+[ {
+  "id" : 0,
+  "name" : "Java - wygraj życie!",
+  "hour" : 25
+}, {
+  "id" : 0,
+  "name" : "C# - krok po kroku",
+  "hour" : 20
+}, {
+  "id" : 0,
+  "name" : "Java - jak ją poznać?",
+  "hour" : 15
+} ]

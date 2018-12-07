@@ -24,11 +24,11 @@ public class jsonToSqlPerson {
     public static void main(String[] args)
     { }
 
-    public static Boolean checkPersonFalse(List<Person> listOfPeople, String fileSuffix) throws IOException {
+    public static Boolean checkPerson(String fileSuffix, String FoT) throws IOException {
         toJsonXml checker = new toJsonXml();
         checker.init();
-        listOfPeople = new ArrayList<Person>();
-        listOfPeople = serialize(fileSuffix,1);
+        List<Person> listOfPeople = new ArrayList<Person>();
+        listOfPeople = serialize(fileSuffix,FoT);
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("hibernate-dynamic");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
 
@@ -61,38 +61,7 @@ public class jsonToSqlPerson {
     }
 
 
-    public static Boolean c0heckPersonTrue(List<Person> listOfPeople) throws IOException {
-        toJsonXml checker = new toJsonXml();
-        checker.init();
-        listOfPeople = new ArrayList<Person>();
-        listOfPeople = serialize("json",0);
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("hibernate-dynamic");
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-
-
-        Boolean ifCorrect = true;
-        try {
-
-            //rozpocznij transakcje
-            entityManager.getTransaction().begin();
-            for (int i = 0; i < listOfPeople.size(); i++)
-                entityManager.persist(listOfPeople.get(i));
-            entityManager.flush();
-            entityManager.getTransaction().commit();
-
-            entityManager.close();
-
-        } catch (Throwable ex) {
-            System.err.println("Initial SessionFactory creation failed." + ex);
-            ifCorrect = false;
-        } finally {
-            entityManagerFactory.close();
-        }
-
-        return ifCorrect;
-    }
-
-    public static List<Person> serialize(String fileSuffix, int i) throws IOException {
+    public static List<Person> serialize(String fileSuffix, String PiF) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         mapper.enable(SerializationFeature.INDENT_OUTPUT);
 
@@ -103,7 +72,7 @@ public class jsonToSqlPerson {
         List<Person> people = new ArrayList<Person>();
         people = objectsCreator.getPeople();
 
-        if(i==0)
+        if(PiF=="f")
         {
             Person makeFake = new Person();
             makeFake.setImie("Mar");
@@ -111,10 +80,11 @@ public class jsonToSqlPerson {
             people.add(makeFake);
         }
 
+
         //Serialize to file and string
         mapper.writeValue(new File("person_test." + fileSuffix), people);
         List<Person> deserial = new ArrayList<Person>();
-        deserial = mapper.readValue(new File("/home/kamil/IdeaProjects/JsonXmlDatabasePPR/person_test." + fileSuffix), new TypeReference<List<Person>>() { } );
+        deserial = mapper.readValue(new File("person_test." + fileSuffix), new TypeReference<List<Person>>() { } );
         return deserial;
     }
 

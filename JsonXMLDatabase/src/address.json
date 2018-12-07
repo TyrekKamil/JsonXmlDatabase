@@ -1,0 +1,26 @@
+[ {
+  "id" : 0,
+  "miasto" : "Poznań",
+  "ulica" : "Wrocławska",
+  "numer" : "12A"
+}, {
+  "id" : 0,
+  "miasto" : "Szczecin",
+  "ulica" : "Malwinowska",
+  "numer" : "61"
+}, {
+  "id" : 0,
+  "miasto" : "Bolesławiec",
+  "ulica" : "Marlenkowa",
+  "numer" : "123"
+}, {
+  "id" : 0,
+  "miasto" : "Warszawa",
+  "ulica" : "Wiejska",
+  "numer" : "4/6/8"
+}, {
+  "id" : 0,
+  "miasto" : "Wrocław",
+  "ulica" : "Miejska",
+  "numer" : "15G"
+} ]

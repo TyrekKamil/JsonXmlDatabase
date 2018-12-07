@@ -1,0 +1,35 @@
+[ {
+  "id" : 0,
+  "imie" : "Adam",
+  "nazwisko" : "Nowak",
+  "adres" : {
+    "id" : 0,
+    "miasto" : "Warszawa",
+    "ulica" : "Wiejska",
+    "numer" : "4/6/8"
+  },
+  "course" : [ {
+    "id" : 0,
+    "name" : "Java - wygraj życie!",
+    "hour" : 25
+  }, {
+    "id" : 0,
+    "name" : "Java - jak ją poznać?",
+    "hour" : 15
+  } ]
+}, {
+  "id" : 0,
+  "imie" : "Mariusz",
+  "nazwisko" : "Wierzbicki",
+  "adres" : {
+    "id" : 0,
+    "miasto" : "Wrocław",
+    "ulica" : "Miejska",
+    "numer" : "15G"
+  },
+  "course" : [ {
+    "id" : 0,
+    "name" : "C# - krok po kroku",
+    "hour" : 20
+  } ]
+} ]

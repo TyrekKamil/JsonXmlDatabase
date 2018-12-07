@@ -1,0 +1,20 @@
+<ArrayList>
+  <item>
+    <person_id>1</person_id>
+    <course>
+      <id>0</id>
+      <name>Java - wygraj życie!</name>
+      <hour>25</hour>
+    </course>
+    <text>super kurs!</text>
+  </item>
+  <item>
+    <person_id>2</person_id>
+    <course>
+      <id>0</id>
+      <name>C# - krok po kroku</name>
+      <hour>20</hour>
+    </course>
+    <text>za duzo teorii, za malo praktyki</text>
+  </item>
+</ArrayList>

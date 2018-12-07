@@ -161,7 +161,7 @@ public class toJsonXml {
         //System.out.println(jsonOpinions);
 
     }
-
+/*
     public static void deserialize(ObjectMapper mapper) throws IOException {
 
         String fileSuffix = "json";
@@ -181,7 +181,7 @@ public class toJsonXml {
     }
 
 
-
+*/
 
     public static void main(String[] args) throws IOException {
 
@@ -195,7 +195,7 @@ public class toJsonXml {
         jsonMapper.registerModule(new JodaModule());
         //serializeDemo(jsonMapper, "json");
         //serializeDemo(xmlMapper, "xml");
-         deserialize(jsonMapper);
+        // deserialize(jsonMapper);
 
         serialJson(jsonMapper);
         serialXML(xmlMapper);

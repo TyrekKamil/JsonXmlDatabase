@@ -1,0 +1,17 @@
+[ {
+  "person_id" : 1,
+  "course" : {
+    "id" : 0,
+    "name" : "Java - wygraj życie!",
+    "hour" : 25
+  },
+  "text" : "super kurs!"
+}, {
+  "person_id" : 2,
+  "course" : {
+    "id" : 0,
+    "name" : "C# - krok po kroku",
+    "hour" : 20
+  },
+  "text" : "za duzo teorii, za malo praktyki"
+} ]

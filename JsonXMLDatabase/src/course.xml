@@ -1,0 +1,17 @@
+<ArrayList>
+  <item>
+    <id>0</id>
+    <name>Java - wygraj życie!</name>
+    <hour>25</hour>
+  </item>
+  <item>
+    <id>0</id>
+    <name>C# - krok po kroku</name>
+    <hour>20</hour>
+  </item>
+  <item>
+    <id>0</id>
+    <name>Java - jak ją poznać?</name>
+    <hour>15</hour>
+  </item>
+</ArrayList>
