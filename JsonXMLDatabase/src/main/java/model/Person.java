@@ -28,10 +28,10 @@ public class Person
     @JoinColumn(name="add_id", referencedColumnName = "id")
     Address adres;
 
-    @JsonIgnore
     @Column(nullable = false, unique = true)
     private String pesel;
 
+    @JsonIgnore
     public String getAllInformation()
     {
         return imie + " " + nazwisko + " " + adres.getMiasto() + " " + adres.getUlica() + " " +  adres.getNumer() + " " + pesel;

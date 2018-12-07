@@ -33,6 +33,7 @@ public class Course
 
 
     @OneToMany(mappedBy = "course", fetch = FetchType.LAZY)
+    @JsonIgnore
     private List<Opinion> opinions = new ArrayList<Opinion>();
 
   /*  public List<Person> getPerson() {
@@ -43,6 +44,7 @@ public class Course
         this.person = person;
     }
 */
+
     public List<Opinion> getOpinions() {
         return opinions;
     }
@@ -58,6 +60,7 @@ public class Course
     public void setSpeaker(Speaker speaker) {
         this.speaker = speaker;
     }
+    @JsonIgnore
     public String getAllInformation()
     {
         return name + " " + hour + " " + speaker.getImie() + " " + speaker.getNazwisko();

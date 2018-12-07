@@ -22,12 +22,8 @@ class save {
 
         System.out.println("Start");
 
-
-
-
         entityManagerFactory = Persistence.createEntityManagerFactory("hibernate-dynamic");
         entityManager = entityManagerFactory.createEntityManager();
-
 
                 try {
 
