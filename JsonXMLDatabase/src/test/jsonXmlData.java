@@ -10,7 +10,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-public class jsonToSql {
+public class jsonXmlData {
 
     jsonToSqlPerson a = new jsonToSqlPerson();
    /* @Test
@@ -33,29 +33,28 @@ public class jsonToSql {
         assertFalse(a.checkPersonTrue(listPeople));
     }
 */
-
-    @Test
+/*
+   @Test
     public void personFalseXML() throws IOException {
     List<Person> list = new ArrayList<Person>();
-    String fileSuffix = "xml";
-    list = a.serialize("xml",0);
+    list = a.serialLize("xml",0);
 
-    assertFalse(a.checkPersonFalse(list,fileSuffix));
+    assertFalse(a.checkPersonFalse(list,"xml"));
    }
-
+*/
     @Test
     public void personFalseJson() throws IOException {
         List<Person> list = new ArrayList<Person>();
         list = a.serialize("json",0);
-        String fileSuffix = "json";
-        assertFalse(a.checkPersonFalse(list, fileSuffix));
+
+        assertFalse(a.checkPersonFalse(list, "json"));
     }
 
     @Test
     public void personTrue() throws IOException {
         List<Person> list = new ArrayList<Person>();
         list = a.serialize("json",1);
-        String fileSuffix = "json";
-        assertTrue(a.checkPersonFalse(list, fileSuffix));
+
+        assertTrue(a.checkPersonFalse(list, "json"));
     }
 }
