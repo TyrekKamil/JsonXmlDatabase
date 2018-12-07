@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JsonXMLDatabase/src/JsonXMLDatabase.iml" filepath="$PROJECT_DIR$/JsonXMLDatabase/src/JsonXMLDatabase.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/JsonXmlDatabase.iml" filepath="$PROJECT_DIR$/.idea/JsonXmlDatabase.iml" />
     </modules>
   </component>
 </project>

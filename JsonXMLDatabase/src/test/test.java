@@ -1,5 +1,6 @@
 import checker.jsonToSqlPerson;
 import model.Person;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -10,38 +11,24 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-public class jsonToSql {
+public class test
+{
 
-    jsonToSqlPerson a = new jsonToSqlPerson();
-   /* @Test
-    public void personTrue() throws IOException {
+    jsonToSqlPerson a;
 
-        List<Person> listPeople = new ArrayList<Person>();
-        toJsonXml help = new toJsonXml();
-        listPeople = help.getDeserializedPerson();
-        assertTrue(a.checkPersonTrue(listPeople));
-    }
-
-    @Test
-    public void personFalse() throws IOException {
-
-        List<Person> listPeople = new ArrayList<Person>();
-        toJsonXml help = new toJsonXml();
-        listPeople = help.getDeserializedPerson();
-
-        listPeople.remove(0);
-        assertFalse(a.checkPersonTrue(listPeople));
-    }
-*/
-
+   @Before
+   public void before()
+   {
+       a = new jsonToSqlPerson();
+   }
     @Test
     public void personFalseXML() throws IOException {
-    List<Person> list = new ArrayList<Person>();
-    String fileSuffix = "xml";
-    list = a.serialize("xml",0);
+        List<Person> list = new ArrayList<Person>();
+        String fileSuffix = "xml";
+        list = a.serialize("xml",0);
 
-    assertFalse(a.checkPersonFalse(list,fileSuffix));
-   }
+        assertFalse(a.checkPersonFalse(list,fileSuffix));
+    }
 
     @Test
     public void personFalseJson() throws IOException {
