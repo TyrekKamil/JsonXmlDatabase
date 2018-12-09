@@ -24,11 +24,11 @@ public class jsonToSqlPerson {
     public static void main(String[] args)
     { }
 
-    public static Boolean checkPerson(String fileSuffix, String FoT) throws IOException {
+    public static Boolean checkPerson(String fileSuffix, int j) throws IOException {
         toJsonXml checker = new toJsonXml();
         checker.init();
         List<Person> listOfPeople = new ArrayList<Person>();
-        listOfPeople = serialize(fileSuffix,FoT);
+        listOfPeople = serialize(fileSuffix,j);
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("hibernate-dynamic");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
 
@@ -48,7 +48,6 @@ public class jsonToSqlPerson {
 
             System.out.println("Done");
 
-
             entityManager.close();
 
         } catch (Throwable ex) {
@@ -61,7 +60,7 @@ public class jsonToSqlPerson {
     }
 
 
-    public static List<Person> serialize(String fileSuffix, String PiF) throws IOException {
+    public static List<Person> serialize(String fileSuffix, int j) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         mapper.enable(SerializationFeature.INDENT_OUTPUT);
 
@@ -72,7 +71,7 @@ public class jsonToSqlPerson {
         List<Person> people = new ArrayList<Person>();
         people = objectsCreator.getPeople();
 
-        if(PiF=="f")
+        if(j==0)
         {
             Person makeFake = new Person();
             makeFake.setImie("Mar");
