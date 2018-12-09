@@ -12,6 +12,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
@@ -177,14 +178,14 @@ public class save {
             emp.setNazwisko("Polak");
             emp.setAdres(adr1);
             emp.setPesel("98030408259");
-            emp.setDate(new DateTime(10));
+            emp.setDate(new Date(80,12,15));
 
             Person emp2 = new Person();
             emp2.setImie("Marian");
             emp2.setNazwisko("Wiejski");
             emp2.setAdres(adr2);
             emp2.setPesel("98030401239");
-            //emp2.setCourses(coursesPerson2);
+            emp2.setDate(new Date(50,2,1));
 
             Person emp3;
             emp3 = new Person();
@@ -192,7 +193,7 @@ public class save {
             emp3.setNazwisko("Zarzycka");
             emp3.setAdres(adr3);
             emp3.setPesel("98072108123");
-            //emp3.setCourses(coursesPerson3);
+            emp3.setDate(new Date(98,7,21));
 //==============Opinions=================================\\
 
             Opinion opinion1 = new Opinion();

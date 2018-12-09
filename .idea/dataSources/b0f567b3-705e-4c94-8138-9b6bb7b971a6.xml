@@ -133,8 +133,8 @@
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2018-12-09.17:24:43.274</IntrospectionTimestamp>
-      <IntrospectionStateNumber>6968</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-12-09.18:33:05.100</IntrospectionTimestamp>
+      <IntrospectionStateNumber>7468</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -181,105 +181,105 @@
       <Type>index</Type>
     </access-method>
     <sequence id="31" parent="24" name="author_seq">
-      <ObjectId>29756</ObjectId>
+      <ObjectId>30784</ObjectId>
       <Owner>databaseuser</Owner>
-      <StateNumber>6952</StateNumber>
+      <StateNumber>7452</StateNumber>
       <SequenceIdentity>1+50</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
     <sequence id="32" parent="24" name="author_seq1">
-      <ObjectId>29758</ObjectId>
+      <ObjectId>30786</ObjectId>
       <Owner>databaseuser</Owner>
-      <StateNumber>6953</StateNumber>
+      <StateNumber>7453</StateNumber>
       <SequenceIdentity>1+50</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
     <sequence id="33" parent="24" name="author_seq2">
-      <ObjectId>29760</ObjectId>
+      <ObjectId>30788</ObjectId>
       <Owner>databaseuser</Owner>
-      <StateNumber>6954</StateNumber>
+      <StateNumber>7454</StateNumber>
       <SequenceIdentity>1+50</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
     <sequence id="34" parent="24" name="author_seq5">
-      <ObjectId>29762</ObjectId>
+      <ObjectId>30790</ObjectId>
       <Owner>databaseuser</Owner>
-      <StateNumber>6955</StateNumber>
+      <StateNumber>7455</StateNumber>
       <SequenceIdentity>1+50</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
     <sequence id="35" parent="24" name="hibernate_sequence">
-      <ObjectId>29764</ObjectId>
+      <ObjectId>30792</ObjectId>
       <Owner>databaseuser</Owner>
-      <StateNumber>6956</StateNumber>
+      <StateNumber>7456</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
     <table id="36" parent="24" name="addresses">
-      <ObjectId>29766</ObjectId>
+      <ObjectId>30794</ObjectId>
       <Owner>databaseuser</Owner>
-      <StateNumber>6968</StateNumber>
+      <StateNumber>7468</StateNumber>
     </table>
     <table id="37" parent="24" name="course">
-      <ObjectId>29774</ObjectId>
+      <ObjectId>30802</ObjectId>
       <Owner>databaseuser</Owner>
-      <StateNumber>6965</StateNumber>
+      <StateNumber>7465</StateNumber>
     </table>
     <table id="38" parent="24" name="opinion">
-      <ObjectId>29779</ObjectId>
+      <ObjectId>30807</ObjectId>
       <Owner>databaseuser</Owner>
-      <StateNumber>6966</StateNumber>
+      <StateNumber>7466</StateNumber>
     </table>
     <table id="39" parent="24" name="person">
-      <ObjectId>29784</ObjectId>
+      <ObjectId>30812</ObjectId>
       <Owner>databaseuser</Owner>
-      <StateNumber>6967</StateNumber>
+      <StateNumber>7467</StateNumber>
     </table>
     <table id="40" parent="24" name="speaker">
-      <ObjectId>29792</ObjectId>
+      <ObjectId>30820</ObjectId>
       <Owner>databaseuser</Owner>
-      <StateNumber>6968</StateNumber>
+      <StateNumber>7468</StateNumber>
     </table>
     <column id="41" parent="36" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>6957</StateNumber>
+      <StateNumber>7457</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="42" parent="36" name="miasto">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>6957</StateNumber>
+      <StateNumber>7457</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="43" parent="36" name="numer">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>6957</StateNumber>
+      <StateNumber>7457</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="44" parent="36" name="ulica">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>6957</StateNumber>
+      <StateNumber>7457</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <index id="45" parent="36" name="addresses_pkey">
-      <ObjectId>29772</ObjectId>
+      <ObjectId>30800</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="46" parent="36" name="addresses_pkey">
-      <ObjectId>29773</ObjectId>
+      <ObjectId>30801</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>addresses_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
@@ -288,42 +288,42 @@
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>6958</StateNumber>
+      <StateNumber>7458</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="48" parent="37" name="godziny">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>6958</StateNumber>
+      <StateNumber>7458</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="49" parent="37" name="nazwa">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>6958</StateNumber>
+      <StateNumber>7458</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="50" parent="37" name="speaker_id">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>6958</StateNumber>
+      <StateNumber>7458</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <index id="51" parent="37" name="course_pkey">
-      <ObjectId>29777</ObjectId>
+      <ObjectId>30805</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="52" parent="37" name="course_pkey">
-      <ObjectId>29778</ObjectId>
+      <ObjectId>30806</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>course_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="53" parent="37" name="fk3qc4ll0xhab6j8rg1bk2urv4x">
-      <ObjectId>29804</ObjectId>
+      <ObjectId>30832</ObjectId>
       <ColNames>speaker_id</ColNames>
-      <RefTableId>29792</RefTableId>
+      <RefTableId>30820</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>speaker</RefTableName>
       <RefKeyName>speaker_pkey</RefKeyName>
@@ -333,51 +333,51 @@
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>6959</StateNumber>
+      <StateNumber>7459</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="55" parent="38" name="text">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>6959</StateNumber>
+      <StateNumber>7459</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="56" parent="38" name="course_id">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>6959</StateNumber>
+      <StateNumber>7459</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="57" parent="38" name="person_id">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>6959</StateNumber>
+      <StateNumber>7459</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <index id="58" parent="38" name="opinion_pkey">
-      <ObjectId>29782</ObjectId>
+      <ObjectId>30810</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="59" parent="38" name="opinion_pkey">
-      <ObjectId>29783</ObjectId>
+      <ObjectId>30811</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>opinion_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="60" parent="38" name="fkn0h16k638dg20hky8fsw175iq">
-      <ObjectId>29809</ObjectId>
+      <ObjectId>30837</ObjectId>
       <ColNames>course_id</ColNames>
-      <RefTableId>29774</RefTableId>
+      <RefTableId>30802</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>course</RefTableName>
       <RefKeyName>course_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
     <foreign-key id="61" parent="38" name="fkp7mkl6aydo5p0dqnjik3biggg">
-      <ObjectId>29814</ObjectId>
+      <ObjectId>30842</ObjectId>
       <ColNames>person_id</ColNames>
-      <RefTableId>29784</RefTableId>
+      <RefTableId>30812</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>person</RefTableName>
       <RefKeyName>person_pkey</RefKeyName>
@@ -387,65 +387,65 @@
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>6960</StateNumber>
+      <StateNumber>7460</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="63" parent="39" name="date">
       <Position>2</Position>
-      <DataType>bytea|0s</DataType>
-      <StateNumber>6960</StateNumber>
-      <TypeId>17</TypeId>
+      <DataType>date|0s</DataType>
+      <StateNumber>7460</StateNumber>
+      <TypeId>1082</TypeId>
     </column>
     <column id="64" parent="39" name="imie">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>6960</StateNumber>
+      <StateNumber>7460</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="65" parent="39" name="nazwisko">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>6960</StateNumber>
+      <StateNumber>7460</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="66" parent="39" name="pesel">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>6960</StateNumber>
+      <StateNumber>7460</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="67" parent="39" name="add_id">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>6960</StateNumber>
+      <StateNumber>7460</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <index id="68" parent="39" name="person_pkey">
-      <ObjectId>29790</ObjectId>
+      <ObjectId>30818</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
     <index id="69" parent="39" name="uk_4y5wxcq8v44ngx9rwrq4j9wev">
-      <ObjectId>29800</ObjectId>
+      <ObjectId>30828</ObjectId>
       <ColNames>pesel</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="70" parent="39" name="person_pkey">
-      <ObjectId>29791</ObjectId>
+      <ObjectId>30819</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>person_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <key id="71" parent="39" name="uk_4y5wxcq8v44ngx9rwrq4j9wev">
-      <ObjectId>29801</ObjectId>
+      <ObjectId>30829</ObjectId>
       <ColNames>pesel</ColNames>
       <UnderlyingIndexName>uk_4y5wxcq8v44ngx9rwrq4j9wev</UnderlyingIndexName>
     </key>
     <foreign-key id="72" parent="39" name="fkljegqt1yrk0gvm0jch5jr504m">
-      <ObjectId>29819</ObjectId>
+      <ObjectId>30847</ObjectId>
       <ColNames>add_id</ColNames>
-      <RefTableId>29766</RefTableId>
+      <RefTableId>30794</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>addresses</RefTableName>
       <RefKeyName>addresses_pkey</RefKeyName>
@@ -455,59 +455,59 @@
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>6961</StateNumber>
+      <StateNumber>7461</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="74" parent="40" name="imie">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>6961</StateNumber>
+      <StateNumber>7461</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="75" parent="40" name="nazwisko">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>6961</StateNumber>
+      <StateNumber>7461</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="76" parent="40" name="pesel">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>6961</StateNumber>
+      <StateNumber>7461</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="77" parent="40" name="add_id">
       <Position>5</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>6961</StateNumber>
+      <StateNumber>7461</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <index id="78" parent="40" name="speaker_pkey">
-      <ObjectId>29798</ObjectId>
+      <ObjectId>30826</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
     <index id="79" parent="40" name="uk_o0as4mbwktq1okfnxt07akyvi">
-      <ObjectId>29802</ObjectId>
+      <ObjectId>30830</ObjectId>
       <ColNames>pesel</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="80" parent="40" name="speaker_pkey">
-      <ObjectId>29799</ObjectId>
+      <ObjectId>30827</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>speaker_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <key id="81" parent="40" name="uk_o0as4mbwktq1okfnxt07akyvi">
-      <ObjectId>29803</ObjectId>
+      <ObjectId>30831</ObjectId>
       <ColNames>pesel</ColNames>
       <UnderlyingIndexName>uk_o0as4mbwktq1okfnxt07akyvi</UnderlyingIndexName>
     </key>
     <foreign-key id="82" parent="40" name="fkny3agx3wt6bsrypabdp5y6kee">
-      <ObjectId>29824</ObjectId>
+      <ObjectId>30852</ObjectId>
       <ColNames>add_id</ColNames>
-      <RefTableId>29766</RefTableId>
+      <RefTableId>30794</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>addresses</RefTableName>
       <RefKeyName>addresses_pkey</RefKeyName>
