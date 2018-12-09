@@ -3,6 +3,8 @@ package database;
 //import hibernate.model.Person;
 import model.*;
 import org.apache.log4j.Logger;
+import org.joda.time.DateTime;
+import org.joda.time.LocalDate;
 
 
 import javax.persistence.EntityManager;
@@ -32,50 +34,47 @@ public class save {
             System.out.println(result.get(i).getAllInformation());
     }
 
-    public static void getAllCourse()
+    public static void getCoursesHours()
     {
-        Query query = entityManager.createQuery("SELECT c FROM Course c");
-        System.out.println("\nLista kursów z prowadzącymi");
+        Query query = entityManager.createQuery("SELECT c FROM Course c where c.hour > 15");
         List<Course> result = query.getResultList();
+        System.out.println("\nKursy trwające powyżej 15 godzin");
         for(int i = 0;i<result.size();i++)
             System.out.println(result.get(i).getAllInformation());
     }
 
-    public static void opinionByIdCourse()
+    public static void opinionSecondCourse()
     {
+        Query query = entityManager.createQuery("SELECT o FROM Opinion o where o.course.id=1");
 
+
+        List<Opinion> result = query.getResultList();
+        System.out.println("\nOpinie danego kursu");
+        for(int i = 0;i<result.size();i++)
+            System.out.println(result.get(i).getText());
     }
 
     public static void courseSpeaker()
     {
+        Query query = entityManager.createQuery("SELECT o FROM Course o Where o.speaker.id=1");
 
-    }
 
-    public static void peopleFromCity()
-    {
-
+        List<Course> result = query.getResultList();
+        System.out.println("\nKursy prowadzone przez danego nauczyciela");
+        for(int i = 0;i<result.size();i++)
+            System.out.println(result.get(i).getSpeaker().getImie() + " " + result.get(i).getSpeaker().getNazwisko());
     }
 
     public static void opinionPages(int pageNr)
     {
-        Query queryTotal = entityManager.createQuery
-                ("Select count(o) from Opinion o");
-        long countResult = (long)queryTotal.getSingleResult();
-
-        //create query
-        Query query = entityManager.createQuery("Select e FROM Opinion e");
-        //set pageSize
-        int pageSize = 5;
-        //calculate number of pages
-        int pageNumber = (int) ((countResult / pageSize) + 1);
-
-        if (pageNr > pageNumber) pageNr = pageNumber;
-        query.setFirstResult((pageNr-1) * pageSize);
+        Query query = entityManager.createQuery("Select o From Opinion o");
+        int pageNumber = 1;
+        int pageSize = 2;
+        query.setFirstResult((pageNumber - 1) * pageSize);
         query.setMaxResults(pageSize);
-
-        List<Opinion> opinions = new ArrayList<Opinion>();
-        for(int i = 0; i<query.getResultList().size();i++)
-            System.out.println(opinions.get(i).getCourse() + " " + opinions.get(i).getPerson() + "\n" + opinions.get(i).getText());
+        List<Opinion> list = query.getResultList();
+        for(int x=0;x<list.size();x++)
+            System.out.println(list.get(x).getPerson().getImie() + " " + list.get(x).getPerson().getNazwisko() + " " + list.get(x).getCourse().getName() + " " + list.get(x).getText());
     }
 
 
@@ -178,7 +177,7 @@ public class save {
             emp.setNazwisko("Polak");
             emp.setAdres(adr1);
             emp.setPesel("98030408259");
-            //emp.setCourses(coursesPerson1);
+            emp.setDate(new DateTime(10));
 
             Person emp2 = new Person();
             emp2.setImie("Marian");
@@ -242,7 +241,11 @@ public class save {
             ///////////////////////////ZAPYTANIA\\\\\\\\\\\\\\\\\\\\\\\\\
 
             getAllPerson();
-            getAllCourse();
+            getCoursesHours();
+            opinionSecondCourse();
+            opinionPages(2);
+            courseSpeaker();
+
             Opinion n = new Opinion();
             for (int i = 1; i<20; i++) {
 

@@ -1,12 +1,19 @@
 package model;
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.joda.time.DateTime;
+import org.joda.time.LocalDate;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@XmlRootElement
+@XmlType(propOrder={"date"})
 @Entity
 @Table(name = "person", uniqueConstraints = {
         @UniqueConstraint(columnNames = {"pesel"})})
@@ -22,7 +29,21 @@ public class Person
     @Column
     private String nazwisko;
 
+    @JsonIgnore
+    private DateTime date;
 
+    @Column
+    private String newDate(DateTime x)
+    {
+        return x.toString();
+    }
+    public DateTime getDate() {
+        return date;
+    }
+
+    public void setDate(DateTime date) {
+        this.date = date;
+    }
 
     @OneToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name="add_id", referencedColumnName = "id")

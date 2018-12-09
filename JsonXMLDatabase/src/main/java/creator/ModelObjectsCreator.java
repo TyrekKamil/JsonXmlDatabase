@@ -1,6 +1,7 @@
 package creator;
 
 import model.*;
+import org.joda.time.DateTime;
 
 import javax.persistence.Query;
 import java.util.ArrayList;
@@ -160,21 +161,21 @@ public class ModelObjectsCreator {
         emp.setNazwisko("Polak");
         emp.setAdres(adr1);
         emp.setPesel("98030408259");
-        //emp.setCourses(coursesPerson1);
+        emp.setDate(new DateTime(1991-5-12));
 
         emp2 = new Person();
         emp2.setImie("Marian");
         emp2.setNazwisko("Wiejski");
         emp2.setAdres(adr2);
         emp2.setPesel("98030401239");
-        //emp2.setCourses(coursesPerson2);
+        emp2.setDate(new DateTime(1990-12-12));
 
         emp3 = new Person();
         emp3.setImie("Marlena");
         emp3.setNazwisko("Zarzycka");
         emp3.setAdres(adr3);
         emp3.setPesel("98072108123");
-        //emp3.setCourses(coursesPerson3);
+        emp3.setDate(new DateTime(1998-7-21));
 
         people = new ArrayList<Person>();
         people.add(emp);
