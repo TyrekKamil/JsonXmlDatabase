@@ -133,8 +133,7 @@
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2018-12-07.18:20:40.174</IntrospectionTimestamp>
-      <IntrospectionStateNumber>6093</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-12-09.12:30:23.737</IntrospectionTimestamp>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -180,45 +179,5 @@
       <HandlerId>335</HandlerId>
       <Type>index</Type>
     </access-method>
-    <sequence id="31" parent="24" name="author_seq">
-      <ObjectId>27939</ObjectId>
-      <Owner>databaseuser</Owner>
-      <StateNumber>6089</StateNumber>
-      <SequenceIdentity>1+50</SequenceIdentity>
-      <CacheSize>1</CacheSize>
-      <DataType>bigint</DataType>
-    </sequence>
-    <sequence id="32" parent="24" name="author_seq1">
-      <ObjectId>27941</ObjectId>
-      <Owner>databaseuser</Owner>
-      <StateNumber>6090</StateNumber>
-      <SequenceIdentity>1+50</SequenceIdentity>
-      <CacheSize>1</CacheSize>
-      <DataType>bigint</DataType>
-    </sequence>
-    <sequence id="33" parent="24" name="author_seq2">
-      <ObjectId>27943</ObjectId>
-      <Owner>databaseuser</Owner>
-      <StateNumber>6091</StateNumber>
-      <SequenceIdentity>1+50</SequenceIdentity>
-      <CacheSize>1</CacheSize>
-      <DataType>bigint</DataType>
-    </sequence>
-    <sequence id="34" parent="24" name="author_seq5">
-      <ObjectId>27945</ObjectId>
-      <Owner>databaseuser</Owner>
-      <StateNumber>6092</StateNumber>
-      <SequenceIdentity>1+50</SequenceIdentity>
-      <CacheSize>1</CacheSize>
-      <DataType>bigint</DataType>
-    </sequence>
-    <sequence id="35" parent="24" name="hibernate_sequence">
-      <ObjectId>27947</ObjectId>
-      <Owner>databaseuser</Owner>
-      <StateNumber>6093</StateNumber>
-      <SequenceIdentity>1</SequenceIdentity>
-      <CacheSize>1</CacheSize>
-      <DataType>bigint</DataType>
-    </sequence>
   </database-model>
 </dataSource>
